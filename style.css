@@ -63,11 +63,124 @@ body {
 
 
 #header {
-  background-color: lightgreen;
+  background-color: whitesmoke;
 
   grid-column: 2 / end-col-line;
   grid-row: 1 / span 1;
+
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: 1.5fr 1fr;
+  row-gap: 1.75em;
+
+  padding: 0.5em 3em 1.25em;
 }
+
+#search-bar {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  padding: 1em 0;
+}
+
+input[type=search] {
+  background-color: lightgray;
+  border-radius: 1em;
+  border: none;
+  
+  outline: none;
+
+  padding-left: 1em;
+
+  min-height: 2em;
+  
+  flex-grow: 1;
+}
+
+#notify-panel {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+
+  justify-self: end;
+
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  align-items: center;
+
+  column-gap: 1.75em;
+
+  padding-left: 1em;
+  padding-right: 2em;
+}
+
+#notify-username-text {
+  font-size: medium;
+  text-wrap: nowrap;
+}
+
+#user-info {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  align-items: center;
+
+  column-gap: 1em;
+
+  padding: 0.5em;
+}
+
+#user-info p {
+  font-weight: bold;
+}
+
+#user-greeting {
+  font-size: small;
+  margin-bottom: 0.25rem;
+}
+
+#username-text {
+  font-size: x-large;
+}
+
+
+#header-buttons {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+
+  justify-self: end;
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 2em;
+
+  padding: 0.5em;
+}
+
+.header-btn {
+  font-size: medium;
+  font-weight: bold;
+
+  background-color: rgb(10, 124, 195);
+  color: white;
+
+  border-radius: 1.35em;
+  border: none;
+
+  padding: 0.65em 2em;
+}
+
+
 
 #main-content {
   background-color: antiquewhite;
