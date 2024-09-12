@@ -183,7 +183,7 @@ input[type=search] {
 
 
 #main-content {
-  background-color: antiquewhite;
+  background-color: rgb(227, 227, 227);
 
   grid-column: 2 / end-col-line;
   grid-row: 2 / end-row-line;
@@ -192,8 +192,8 @@ input[type=search] {
   grid-template-columns: minmax(min-content, 2.75fr) minmax(min-content, 1fr);
   grid-template-rows: repeat(2, minmax(min-content, 1fr));
   
-  column-gap: 1em;
-  row-gap: 2em;
+  column-gap: 2em;
+  row-gap: 3em;
 
   padding: 2em 2em 4em 1em;
 }
@@ -210,6 +210,12 @@ input[type=search] {
 }
 
 #projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2em;
+}
+
+.project-card {
   background-color: whitesmoke;
 }
 
