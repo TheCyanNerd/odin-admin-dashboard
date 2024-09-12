@@ -189,11 +189,17 @@ input[type=search] {
   grid-row: 2 / end-row-line;
 
   display: grid;
-  grid-template-columns: minmax(min-content, 2.5fr) minmax(min-content, 1fr);
+  grid-template-columns: minmax(min-content, 2.75fr) minmax(min-content, 1fr);
   grid-template-rows: repeat(2, minmax(min-content, 1fr));
   
   column-gap: 1em;
   row-gap: 2em;
+
+  padding: 2em 2em 4em 1em;
+}
+
+#main-content h2 {
+  margin-bottom: 0.5em;
 }
 
 
@@ -216,11 +222,41 @@ input[type=search] {
 
 #announcements-container {
   background-color: whitesmoke;
+
+  display: grid;
+  /* grid-template-rows: 1fr 0 1fr 0 1fr; */
+  grid-template-rows: min-content 0 min-content 0 min-content;
+  align-items: center;
+  
+  row-gap: 1.5em;
+
+  border-radius: 1em;
+  box-shadow: 0.1em 0.1em 0.1em lightgray;
+
+  padding: 3em;
+}
+
+.announcement-title {
+  font-size: 1em;
+  margin-bottom: 0.35em;
+}
+
+.announcement-text {
+  font-size: small;
+  color: rgb(93, 93, 93);
+}
+
+#announcements-container > hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
 
-#trending {
+
+#trending-container {
   background-color: whitesmoke;
 
   grid-area: 2 / span 1;
