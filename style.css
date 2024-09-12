@@ -215,10 +215,52 @@ input[type=search] {
   gap: 2em;
 }
 
-.project-card {
+.project-card {  
   background-color: whitesmoke;
+
+  border-radius: 1em;
+  box-shadow: 
+    0.1em 0.1em 0.1em lightgray,
+    inset 1em 0 yellow;
+
+  padding-left: 0.75em;
+  padding-right: 2em;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.card-main {
+  background-color: whitesmoke;
+
+  height: 100%;
+
+  padding: 2.5em 2.5em 2.5em 1.5em;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.card-content {
+  margin-bottom: 4em;
+}
+
+.card-action-icons {
+  position: absolute;
+
+  bottom: 2.5em;
+  right: 2.5em;
+
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  column-gap: 3em;
+}
+
+.project-title {
+  margin-bottom: 0.5em; 
+}
 
 
 #announcements {
